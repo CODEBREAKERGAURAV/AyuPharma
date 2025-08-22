@@ -1,9 +1,10 @@
-import React from 'react'
+// import React from 'react'
+import Home from "./components/Home"
 
 const App = () => {
   return (
-    <div className='mx-4 sm:mx-[10%]'>
-      
+    <div >
+     <Home></Home>
     </div>
   )
 }
