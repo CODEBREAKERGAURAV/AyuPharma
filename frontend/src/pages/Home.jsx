@@ -1,8 +1,11 @@
 import React from 'react'
+import Header from '../components/Header'
 
 const Home = () => {
   return (
-      <div className="bg-green-500 text-white p-4 rounded">Home</div>
+      <div>
+        <Header/>
+      </div>
   )
 }
 

@@ -7,7 +7,7 @@ export default {
   theme: {
     extend: {
       colors: {
-        primary: "#af1ea8",   // cleaned hex (drop `ff` at end)
+        primary: "#5f6fff",   // cleaned hex (drop `ff` at end)
         secondary: "#9333EA",
         accent: "#F59E0B",
       },
