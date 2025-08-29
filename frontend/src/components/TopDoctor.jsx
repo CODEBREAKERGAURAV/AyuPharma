@@ -1,11 +1,12 @@
 import React, { useContext } from "react";
-import { doctors } from "../assets/assets";
 import { useNavigate } from "react-router-dom";
+import { AppContext } from "../context/AppContext";
 
 
 
 const TopDoctor = () => {
    const navigate=useNavigate();
+   const {doctors}=useContext(AppContext)
   
  
   return (
@@ -17,7 +18,7 @@ const TopDoctor = () => {
           <div key={index} onClick={()=>navigate(`/appointment/${item._id}`)} className="border border-blue-200 rounded-xl overflow-hidden cursor-pointer hover:translate-y-[-10px] transition-allduration-500">
             <img src={item.image} className="bg-blue-50" />
             <div className="p-4">
-              <div className="flex items-centre gap-2 text-sm text-centre text-green-500">
+              <div className="flex items-center gap-2 text-sm text-centre text-green-500">
                 <p className="w-2 h-2 bg-green-500 rounded-full"></p><p>Available</p>
               </div>
               <p className="text-gray-900 text-lg font-medium">{item.name}</p>

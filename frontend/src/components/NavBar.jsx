@@ -12,6 +12,7 @@ const NavBar = () => {
         src={assets.logo}
         alt="AyuPharma Logo"
         className="w-44 cursor-pointer"
+        onClick={() => navigate("/")}
       />
       <ul className="hidden md:flex items-start gap-5 font-medium">
         <NavLink to="/">
