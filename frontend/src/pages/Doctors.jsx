@@ -42,25 +42,25 @@ const Doctors = () => {
              className={`w-[94vw] sm:w-auto pl-3 py-1.5 pr-16 border border-gray-300 rounded transition-all cursor-pointer ${speciality === "General physician" ? "bg-indigo-100 text-black" : ""}`}>
             General physician
           </p>
-          <p onClick={() => speciality === 'Gynecologist' ? navigate('/doctors') : navigate('/doctors/Gynecologist')}
+          <p onClick={() => speciality === 'Stri Roga' ? navigate('/doctors') : navigate('/doctors/Stri Roga')}
              className={`w-[94vw] sm:w-auto pl-3 py-1.5 pr-16 border border-gray-300 rounded transition-all cursor-pointer ${speciality === "Gynecologist" ? "bg-indigo-100 text-black" : ""}`}>
-            Gynecologist
+            Stri Roga
           </p>
-          <p onClick={() => speciality === 'Dermatologist' ? navigate('/doctors') : navigate('/doctors/Dermatologist')}
+          <p onClick={() => speciality === 'Kaya Chikitsa' ? navigate('/doctors') : navigate('/doctors/Kaya Chikitsa')}
              className={`w-[94vw] sm:w-auto pl-3 py-1.5 pr-16 border border-gray-300 rounded transition-all cursor-pointer ${speciality === "Dermatologist" ? "bg-indigo-100 text-black" : ""}`}>
-            Dermatologist
+            Kaya Chikitsa
           </p>
-          <p onClick={() => speciality === 'Pediatricians' ? navigate('/doctors') : navigate('/doctors/Pediatricians')}
+          <p onClick={() => speciality === 'Bala Roga' ? navigate('/doctors') : navigate('/doctors/Bala Roga')}
              className={`w-[94vw] sm:w-auto pl-3 py-1.5 pr-16 border border-gray-300 rounded transition-all cursor-pointer ${speciality === "Pediatricians" ? "bg-indigo-100 text-black" : ""}`}>
-            Pediatricians
+            Bala Roga
           </p>
-          <p onClick={() => speciality === 'Neurologist' ? navigate('/doctors') : navigate('/doctors/Neurologist')}
+          <p onClick={() => speciality === 'Vata Vyadhi Specialist' ? navigate('/doctors') : navigate('/doctors/Vata Vyadhi Specialist')}
              className={`w-[94vw] sm:w-auto pl-3 py-1.5 pr-16 border border-gray-300 rounded transition-all cursor-pointer ${speciality === "Neurologist" ? "bg-indigo-100 text-black" : ""}`}>
-            Neurologist
+            Vata Vyadhi Specialis
           </p>
-          <p onClick={() => speciality === 'Gastroenterologist' ? navigate('/doctors') : navigate('/doctors/Gastroenterologist')}
+          <p onClick={() => speciality === 'Agni & Pachan Tantra)' ? navigate('/doctors') : navigate('/doctors/Agni & Pachan Tantra)')}
              className={`w-[94vw] sm:w-auto pl-3 py-1.5 pr-16 border border-gray-300 rounded transition-all cursor-pointer ${speciality === "Gastroenterologist" ? "bg-indigo-100 text-black" : ""}`}>
-            Gastroenterologist
+            Agni & Pachan Tantra
           </p>
         </div>
         

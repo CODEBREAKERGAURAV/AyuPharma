@@ -1,6 +1,7 @@
 import React from 'react'
 import { assets } from '../assets/assets'
 import { useNavigate } from 'react-router-dom'
+import BannerImg from '../assets/Banner.jpeg';
 
 const Banner = () => {
   
@@ -19,7 +20,7 @@ const navigate=useNavigate();
 
          {/* right side */}
         <div className='hidden md:block md:w-1/2 lg:w-[370px] relative'>
-             <img className='w-full absolute bottom-0 right-0 max-w-md' src={assets.appointment_img}/>
+             <img className='w-full absolute bottom-0 right-0 max-w-md' src={BannerImg}/>
         </div>
     </div>
   )
