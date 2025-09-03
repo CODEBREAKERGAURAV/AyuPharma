@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { assets } from "../assets/assets";
 import { NavLink, useNavigate } from "react-router-dom";
+import logo from "../assets/image.png";
 const NavBar = () => {
   const navigate = useNavigate();
   const [showMenu, setShowMenu] = useState(false);
@@ -9,8 +10,7 @@ const NavBar = () => {
   return (
     <div className="flex items-center justify-between text-sm py-4 mb-5 border-b border-b-gray-400">
       <img
-        src={assets.logo}
-        alt="AyuPharma Logo"
+        src={logo}  alt="AyuPharma Logo"
         className="w-44 cursor-pointer"
         onClick={() => navigate("/")}
       />
