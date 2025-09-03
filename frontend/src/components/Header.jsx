@@ -19,7 +19,7 @@ const Header = () => {
       </div>
       {/* right side */}
       <div className='md:w-1/2 relative'>
-         <img src={assets.header_img} className='w-full md:absolute bottom-0 h-auto rounded-lg'/>
+         <img src={assets.headerImg} className='w-full md:absolute bottom-0 h-auto rounded-lg'/>
       </div>
       
     </div>

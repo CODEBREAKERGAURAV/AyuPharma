@@ -1,7 +1,7 @@
 import React from 'react'
 import { assets } from '../assets/assets'
 import { useNavigate } from 'react-router-dom'
-import BannerImg from '../assets/Banner.jpeg';
+import BannerImg from '../assets/BannerImg.png';
 
 const Banner = () => {
   
