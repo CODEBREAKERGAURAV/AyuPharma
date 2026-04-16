@@ -1,4 +1,3 @@
-import React from 'react'
 import AboutImg from '../assets/about.jpeg';
 
 

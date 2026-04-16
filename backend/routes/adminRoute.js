@@ -15,7 +15,7 @@ adminRouter.get('/appointments',authAdmin,appointmentsAdmin)
 
 adminRouter.post('/cancel-appointment',authAdmin,appointmentCancel)
 
-adminRouter.get('/dashboard',,authAdmin,adminDashboard)
+adminRouter.get('/dashboard',authAdmin,adminDashboard)
 
 
 

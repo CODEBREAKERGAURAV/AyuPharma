@@ -1,8 +1,7 @@
-import React, { useContext } from "react";
+import { useContext } from "react";
 import { AppContext } from "../context/AppContext";
 import { useState } from "react";
 import axios from "axios";
-import { set } from "mongoose";
 import { useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 
