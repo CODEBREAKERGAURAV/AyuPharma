@@ -4,6 +4,8 @@ import {v2 as cloudinary} from "cloudinary"
 import doctorModel from "../models/doctorModel.js"
 import { MessageSquare } from "lucide-react"
 import jwt from 'jsonwebtoken'
+import appointmentModel from "../models/appointmentModel.js"
+import userModel from "../models/userModel.js"
 
 
 //api for adding doctor
@@ -13,8 +15,9 @@ const addDoctor=async(req,res)=>{
 
         const {name,email,password,speciality,degree,experience,about,fees,address}=req.body
         const imageFile=req.file
-        //checking for all data to add doctor
 
+        //checking for all data to add doctor
+      
         if(!name || !email || !password || !speciality || !degree || !experience || !about || !fees || !address)
         {
             return res.json({success:false,message:"Missing Details"})
@@ -43,7 +46,7 @@ const addDoctor=async(req,res)=>{
        const doctorData={
         name,
         email,
-        immage:imageUrl,
+        image:imageUrl,
         password:hashedPassword,
         speciality,
         degree,
@@ -164,7 +167,7 @@ const appointmentCancel = async (req, res) => {
     res.json({ success: true, message: "Appointment Cancelled Successfully" });
   } catch (error) {
     console.log(error);
-    res, json({ success: false, message: error.message });
+    res.json({ success: false, message: error.message });
   }
 };
 

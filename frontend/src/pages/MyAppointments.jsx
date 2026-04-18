@@ -1,6 +1,7 @@
 import { useContext } from "react";
 import { AppContext } from "../context/AppContext";
 import { useState } from "react";
+import { toast } from 'react-toastify'
 import axios from "axios";
 import { useEffect } from "react";
 import { useNavigate } from "react-router-dom";
@@ -73,7 +74,7 @@ const MyAppointments = () => {
           
           const {data}=await axios.post(backendUrl+'/api/user/verifyRazorpay',response,{headers:{token}})
 
-          if(data.sucess){
+          if(data.success){
             getUserAppointments()
             navigate('/my-appointments')
           }

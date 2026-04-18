@@ -59,7 +59,7 @@ const Doctors = () => {
              className={`w-[94vw] sm:w-auto pl-3 py-1.5 pr-16 border border-gray-300 rounded transition-all cursor-pointer ${speciality === "Neurologist" ? "bg-indigo-100 text-black" : ""}`}>
             Vata Vyadhi Specialis
           </p>
-          <p onClick={() => speciality === 'Agni & Pachan Tantra)' ? navigate('/doctors') : navigate('/doctors/Agni & Pachan Tantra)')}
+          <p onClick={() => speciality === 'Agni & Pachan Tantra' ? navigate('/doctors') : navigate('/doctors/Agni & Pachan Tantra')}
              className={`w-[94vw] sm:w-auto pl-3 py-1.5 pr-16 border border-gray-300 rounded transition-all cursor-pointer ${speciality === "Gastroenterologist" ? "bg-indigo-100 text-black" : ""}`}>
             Agni & Pachan Tantra
           </p>
@@ -69,7 +69,7 @@ const Doctors = () => {
           {
             filterDoc.map((item, index) => (
               <div 
-                key={index} 
+                key={item._id} 
                 onClick={() => navigate(`/appointment/${item._id}`)} 
                 className="flex flex-col bg-white border border-gray-200 rounded-2xl p-6 cursor-pointer hover:shadow-lg transition-all duration-300 hover:-translate-y-1 h-full min-h-[280px] max-w-[300px] mx-auto w-full"
               >

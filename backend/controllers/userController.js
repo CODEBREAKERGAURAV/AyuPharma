@@ -1,6 +1,8 @@
 import validator from "validator";
 import bcrypt from "bcrypt";
 import userModel from "../models/userModel.js";
+import appointmentModel from "../models/appointmentModel.js";
+import doctorModel from "../models/doctorModel.js";
 import jwt from "jsonwebtoken";
 import { v2 as cloudinary } from "cloudinary";
 import razorpay from "razorpay";
@@ -22,7 +24,7 @@ const registerUser = async (req, res) => {
 
     //validating strong password
 
-    if (password.lenght < 8) {
+    if (password.length< 8) {
       return res.json({ success: false, message: "enter a strong password" });
     }
 
