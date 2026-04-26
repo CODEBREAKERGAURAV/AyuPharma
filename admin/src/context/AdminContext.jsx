@@ -6,7 +6,7 @@ export const AdminContext=createContext()
 
 const AdminContextProvider=(props)=>{
 
-    const [aToken,setAToken]=useState(localStorage.getItem('aToken') || '')
+    const [aToken,setAToken]=useState(localStorage.getItem('aToken')?localStorage.getItem('aToken') : '')
     const [doctors,setDoctors]=useState([])
    const [appointments,setAppointments]=useState([])
 
@@ -54,7 +54,7 @@ const AdminContextProvider=(props)=>{
 
     const getAllAppointments=async()=>{
         try {
-            const {data}=await axios.get(backendUrl+'/api/admin/appointments'),{headers:{aToken}}
+            const {data}=await axios.get(backendUrl+'/api/admin/appointments',{headers:{aToken}})
 
             if(data.success){
                 setAppointments(data.appointments)
@@ -95,7 +95,7 @@ const AdminContextProvider=(props)=>{
     const getDashData=async()=>{
         try {
             
-            const {data}=await axios.get(backendUrl+'/api/admin/dashboard',headers:{aToken})
+            const {data}=await axios.get(backendUrl+'/api/admin/dashboard',{headers:{aToken}})
 
             if(data.success){
                 setDashData(data.dashData)

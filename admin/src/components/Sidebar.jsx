@@ -4,11 +4,11 @@ import { NavLink } from "react-router-dom";
 import { assets } from "../assets/assets";
 
 const Sidebar = () => {
-//   const { atoken } = useContext(AdminContext);
+  const { atoken } = useContext(AdminContext);
 
   return (
     <div className="min-h-screen bg-white border-r">
-      {/* {aToken && ( */}
+      {aToken && 
         <ul className="text-[#515151] mt-5">
           <NavLink
             to="/admin-dashboard"
@@ -45,7 +45,7 @@ const Sidebar = () => {
             <p>Doctor List</p>
           </NavLink>
         </ul>
-      {/* )} */}
+    }
     </div>
   );
 };

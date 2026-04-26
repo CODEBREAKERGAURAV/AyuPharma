@@ -1,7 +1,5 @@
-import React from 'react'
-import { useContext } from 'react'
+import React, { useContext, useEffect } from 'react'
 import { AdminContext } from '../../context/AdminContext'
-import { get } from 'mongoose'
 import { assets } from '../../assets/assets'
 import { AppContext } from '../../context/AppContext'
 
