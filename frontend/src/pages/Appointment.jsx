@@ -24,6 +24,7 @@ const Appointment = () => {
   };
 
   const getAvailableSlots = async () => {
+    if (!docInfo) return;
     setDocSlots([]);
     //getting current date
 
@@ -99,7 +100,7 @@ const Appointment = () => {
     let month=date.getMonth()+1
     let year=date.getFullYear()
 
-    const slotDate=day+"_"+month+"-"+year
+    const slotDate=day+"_"+month+"_"+year
 
     const {data}=await axios.post(backendUrl+'/api/user/book-appointment',{docId,slotDate,slotTime},{headers:{token}})
 
@@ -126,9 +127,10 @@ const Appointment = () => {
   }, [doctors, docId]);
 
   useEffect(() => {
+  if (docInfo) {
     getAvailableSlots();
-  }, [doctors, docId]);
-
+  }
+}, [docInfo]);
   useEffect(() => {}, [docSlots]);
 
   return (
