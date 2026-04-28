@@ -1,10 +1,10 @@
-import React from "react";
+import React, { useContext } from 'react';
 import { AdminContext } from "../context/AdminContext";
 import { NavLink } from "react-router-dom";
 import { assets } from "../assets/assets";
 
 const Sidebar = () => {
-  const { atoken } = useContext(AdminContext);
+  const { aToken } = useContext(AdminContext);
 
   return (
     <div className="min-h-screen bg-white border-r">

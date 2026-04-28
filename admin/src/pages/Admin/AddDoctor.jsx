@@ -35,7 +35,7 @@ const AddDoctor = () => {
             formData.append('email',email)
             formData.append('password',password)
             formData.append('experience',experience)
-            formData.append('fees',fees)
+            formData.append('fees',Number(fees))
             formData.append('about',about)
             formData.append('speciality',speciality)
             formData.append('degree',degree)
@@ -43,9 +43,9 @@ const AddDoctor = () => {
 
             //console log
 
-            formData.forEach((value,key)=>{
-                console.log(`${key} : ${value}`);
-            })
+            // formData.forEach((value,key)=>{
+            //     console.log(`${key} : ${value}`);
+            // })
 
        const {data} =await axios.post(backendUrl+'/api/admin/add-doctor',formData,{headers:{aToken}})
 
