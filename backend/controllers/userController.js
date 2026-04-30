@@ -179,7 +179,7 @@ const bookAppointment = async (req, res) => {
     console.log(error);
     res.json({ success: false, message: error.message });
   }
-};
+}; 
 
 //api to get user appointments
 
