@@ -115,6 +115,8 @@ const updateProfile = async (req, res) => {
         resource_type: "image",
       });
 
+      const imageURL=imageUpload.secure_url
+
       await userModel.findByIdAndUpdate(userId, { image: imageURL });
     }
 
@@ -228,7 +230,7 @@ const cancelAppointment = async (req, res) => {
     res.json({ success: true, message: "Appointment Cancelled Successfully" });
   } catch (error) {
     console.log(error);
-    res, json({ success: false, message: error.message });
+    res.json({ success: false, message: error.message });
   }
 };
 
